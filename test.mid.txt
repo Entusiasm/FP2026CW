@@ -8,4 +8,3 @@ Note density: 4.715166365110628 notes/sec
 Estimated tempo (BPM): 110.00011000010868
 Estimated key: A# minor
 Pitch class profile: 0,093, 0,000, 0,297, 0,000, 0,075, 0,174, 0,000, 0,113, 0,000, 0,185, 0,063, 0,000
-Chord histogram: Map()
