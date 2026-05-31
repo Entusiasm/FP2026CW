@@ -49,7 +49,24 @@ object HarmonyAnalyzer {
     if (denom == 0) 0 else numerator / denom
   }
 
-    private def findTriad(pcs: Vector[Int]): Option[String] = {
+  def detectChords(notes: Vector[Note], config: Config): Map[String, Int] = {
+    val chords = scala.collection.mutable.Map.empty[String, Int].withDefaultValue(0)
+    val stepMs = config.chordWindowMs
+    val endTime = if (notes.isEmpty) 0.0 else notes.map(_.endSec).max
+    val steps = (endTime * 1000 / stepMs).toInt
+    for (i <- 0 to steps) {
+      val t = i * stepMs / 1000.0
+      val activePcs = notes.filter(n => n.startSec <= t && n.endSec >= t).map(_.pitchClass).distinct.sorted
+      if (activePcs.size >= config.minChordNotes) {
+        findTriad(activePcs).foreach { chordName =>
+          chords(chordName) = chords(chordName) + 1
+        }
+      }
+    }
+    chords.toMap
+  }
+
+  private def findTriad(pcs: Vector[Int]): Option[String] = {
     val rootCandidates = pcs.flatMap { root =>
       val major = Set(root, (root + 4) % 12, (root + 7) % 12)
       val minor = Set(root, (root + 3) % 12, (root + 7) % 12)
