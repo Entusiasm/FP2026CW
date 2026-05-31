@@ -1,0 +1,10 @@
+MIDI Analyzer Report
+=====================
+File: mozart-symphony40-1-piano-solo.mid
+Duration: 414.55724470308826 sec
+Tracks: 2
+Total notes: 5908
+Note density: 14.251349060927383 notes/sec
+Estimated tempo (BPM): 0.0
+Estimated key: F minor
+Pitch class profile: 0,100, 0,045, 0,170, 0,098, 0,033, 0,109, 0,038, 0,142, 0,023, 0,080, 0,145, 0,016

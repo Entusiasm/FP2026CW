@@ -41,7 +41,7 @@ package object model {
 
   // Конфигурация (может быть расширена)
   case class Config(
-      chordWindowMs: Int = 100,
+      chordWindowMs: Int = 120,
       minChordNotes: Int = 3,
       bpmMin: Double = 60,
       bpmMax: Double = 200

@@ -15,24 +15,22 @@ object Report {
        |  "bpm": ${result.bpm},
        |  "estimated_key": "${escape(result.estimatedKey)}",
        |  "pitch_class_profile": [${result.pitchClassProfile.mkString(", ")}],
-       |  "chord_histogram": ${mapToJson(result.chordHistogram)},
        |  "tracks": ${result.tracks}
        |}""".stripMargin
   }
 
   def toText(result: AnalysisResult): String = {
-    s"""MIDI Analyzer Report
-       |=====================
-       |File: ${result.filePath}
-       |Duration: ${result.durationSec} sec
-       |Tracks: ${result.tracks}
-       |Total notes: ${result.totalNotes}
-       |Note density: ${result.noteDensity} notes/sec
-       |Estimated tempo (BPM): ${result.bpm}
-       |Estimated key: ${result.estimatedKey}
-       |Pitch class profile: ${result.pitchClassProfile.map(p => f"$p%.3f").mkString(", ")}
-       |Chord histogram: ${result.chordHistogram}
-       |""".stripMargin
+  s"""MIDI Analyzer Report
+     |=====================
+     |File: ${result.filePath}
+     |Duration: ${result.durationSec} sec
+     |Tracks: ${result.tracks}
+     |Total notes: ${result.totalNotes}
+     |Note density: ${result.noteDensity} notes/sec
+     |Estimated tempo (BPM): ${result.bpm}
+     |Estimated key: ${result.estimatedKey}
+     |Pitch class profile: ${result.pitchClassProfile.map(p => f"$p%.3f").mkString(", ")}
+     |""".stripMargin
   }
 
   def saveJson(result: AnalysisResult, path: String): ZIO[Any, String, Unit] = {

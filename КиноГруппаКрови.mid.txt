@@ -1,6 +1,6 @@
 MIDI Analyzer Report
 =====================
-File: C:\Users\yurlo\kursrabotafp\КиноГруппаКрови.mid
+File: КиноГруппаКрови.mid
 Duration: -69.50618399999783 sec
 Tracks: 8
 Total notes: 4603

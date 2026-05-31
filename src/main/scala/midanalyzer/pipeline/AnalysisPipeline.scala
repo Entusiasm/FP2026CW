@@ -23,7 +23,6 @@ object AnalysisPipeline {
         s"Note density: $noteDensity notes/sec",
         s"BPM: $bpm",
         s"Estimated key: $key",
-        s"Chord occurrences: $chords"
       )
       ZIO.succeed((AnalysisResult(path, totalNotes, noteDensity, bpm, pcp, key, chords, durationSec, header.tracks), logs))
     }
