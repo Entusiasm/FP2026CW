@@ -1,0 +1,11 @@
+MIDI Analyzer Report
+=====================
+File: C:\Users\yurlo\kursrabotafp\КиноГруппаКрови.mid
+Duration: -69.50618399999783 sec
+Tracks: 8
+Total notes: 4603
+Note density: 0.0 notes/sec
+Estimated tempo (BPM): 112.28889687387792
+Estimated key: F# minor
+Pitch class profile: 0,000, 0,227, 0,031, 0,001, 0,165, 0,015, 0,242, 0,001, 0,079, 0,122, 0,005, 0,111
+Chord histogram: Map()

@@ -1,0 +1,11 @@
+MIDI Analyzer Report
+=====================
+File: GrandTheftAutoSanAndreasIntro.mid
+Duration: 88.76278600000049 sec
+Tracks: 3
+Total notes: 186
+Note density: 2.0954727581443757 notes/sec
+Estimated tempo (BPM): 110.85726849538064
+Estimated key: F major
+Pitch class profile: 0,044, 0,000, 0,204, 0,080, 0,000, 0,027, 0,000, 0,431, 0,027, 0,000, 0,080, 0,107
+Chord histogram: Map()
